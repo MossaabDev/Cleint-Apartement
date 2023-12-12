@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="80px"
+            android:id="@+id/constructionLayout"
+            android:background="@drawable/bg_phase_one"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/phase_one"
+                android:background="@drawable/bg_phase_one"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="80px"
+        android:id="@+id/paymentLayout"
+        android:layout_below="@+id/constructionLayout"
+        android:background="@drawable/bg_phase_one"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/payment"
+            android:background="@drawable/bg_phase_one"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:id="@+id/profile">
+        <item
+            android:id="@+id/profileMenu"
+            android:title="Profile"
+            android:checkable="true"
+            />
+
+    </group>
+    <group android:id="@+id/groupOne">
+
+        <item
+            android:id="@+id/homeMenu"
+            android:title="Home"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/historyMenue"
+            android:title="History"/>
+
+    </group>
+    <group
+        android:id="@+id/groupTwo">
+        <item
+            android:id="@+id/aboutUs"
+            android:title="About_Us"/>
+        <item
+            android:id="@+id/logOut"
+            android:title="LogOut"/>
+
+    </group>
+</menu>
