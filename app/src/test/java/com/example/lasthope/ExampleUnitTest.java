@@ -1,4 +1,4 @@
-package com.example.client_apartement;
+package com.example.lasthope;
 
 import org.junit.Test;
 
