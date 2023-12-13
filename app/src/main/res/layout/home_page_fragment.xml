@@ -3,37 +3,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <androidx.cardview.widget.CardView
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/constructionLayout"
+        android:background="@drawable/gray_border"
+        android:layout_margin="8dp"
+        android:padding="14dp">
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:layout_margin="20dp"
-            app:cardCornerRadius="80px"
-            android:id="@+id/constructionLayout"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="18dp"
+            android:background="@drawable/bg_phase_one"
+            android:id="@+id/imgConstruction"
+            >
+
+            <ImageView
+                android:layout_width="346dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_phase_one"
+                android:scaleType="centerCrop"
+                android:src="@drawable/phase_one" />
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_bg"
+            android:layout_below="@+id/imgConstruction"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="21dp"
+                android:text="Construction Progress"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="75%"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paymentLayout"
+        android:layout_below="@+id/constructionLayout"
+        android:elevation="8dp"
+        android:background="@drawable/gray_border"
+        android:layout_margin="8dp"
+        android:padding="14dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="18px"
+            android:id="@+id/imgpayment"
             android:background="@drawable/bg_phase_one"
             >
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/phase_one"
+                android:src="@drawable/payment"
                 android:background="@drawable/bg_phase_one"/>
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_bg"
+            android:layout_below="@+id/imgpayment"
+            android:layout_centerHorizontal="true">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="80px"
-        android:id="@+id/paymentLayout"
-        android:layout_below="@+id/constructionLayout"
-        android:background="@drawable/bg_phase_one"
-        >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/payment"
-            android:background="@drawable/bg_phase_one"/>
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="21dp"
+                android:text="Paiment Progress"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="75%"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
+                android:id="@+id/paymentPercentage"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More Details"
+                android:layout_below="@+id/paymentPercentage"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
 </RelativeLayout>
