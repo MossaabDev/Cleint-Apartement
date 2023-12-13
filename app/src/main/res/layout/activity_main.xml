@@ -10,13 +10,14 @@
     >
 
     <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:id="@+id/toolBar"
-            android:title="Home"
-            android:titleTextColor="@color/white"
-            android:textAlignment="center"
-            />
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolBar"
+        android:title="Home"
+        android:titleTextColor="@color/white"
+        android:textAlignment="center"
+    />
+
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
