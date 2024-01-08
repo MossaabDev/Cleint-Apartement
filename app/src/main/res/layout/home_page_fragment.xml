@@ -2,13 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#33808080"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/constructionLayout"
         android:background="@drawable/gray_border"
-        android:layout_margin="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:elevation="8dp"
         android:padding="14dp">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -29,11 +32,12 @@
         </androidx.cardview.widget.CardView>
 
         <RelativeLayout
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
+            android:layout_width="440dp"
+            android:layout_height="60dp"
             android:background="@drawable/gray_bg"
             android:layout_below="@+id/imgConstruction"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:clickable="true">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -45,24 +49,49 @@
                 android:text="Construction Progress"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp">
+                <ProgressBar
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/constructionProgressbar"
+                    android:progressDrawable="@drawable/circle"
+                    android:progress="75"
+                    android:indeterminateOnly="false"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75%"
+                    android:id="@+id/constructionPercentage"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="75%"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="4dp"
+                android:text="More Details"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+
+                android:textColor="#2196F3"
+                android:id="@+id/moreDetailsConstruction"
                 />
         </RelativeLayout>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         android:id="@+id/paymentLayout"
         android:layout_below="@+id/constructionLayout"
         android:elevation="8dp"
         android:background="@drawable/gray_border"
-        android:layout_margin="8dp"
+        android:layout_marginTop="30dp"
         android:padding="14dp">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -80,11 +109,12 @@
                 android:background="@drawable/bg_phase_one"/>
         </androidx.cardview.widget.CardView>
         <RelativeLayout
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
+            android:layout_width="440dp"
+            android:layout_height="60dp"
             android:background="@drawable/gray_bg"
             android:layout_below="@+id/imgpayment"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:maxHeight="60dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -96,22 +126,40 @@
                 android:text="Paiment Progress"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
-            <TextView
+
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="75%"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="4dp"
-                android:id="@+id/paymentPercentage"
-                />
+                android:layout_marginRight="4dp">
+                <ProgressBar
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/paymentProgressbar"
+                    android:progressDrawable="@drawable/circle"
+                    android:progress="75"
+                    android:indeterminateOnly="false"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75%"
+                    android:id="@+id/paymentPercentage"
+                    android:layout_centerInParent="true"
+
+                    />
+            </RelativeLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:text="More Details"
-                android:layout_below="@+id/paymentPercentage"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
+                android:textColor="#2196F3"
+                android:clickable="true"
+                android:id="@+id/moreDetailsPayment"
                 />
         </RelativeLayout>
     </RelativeLayout>

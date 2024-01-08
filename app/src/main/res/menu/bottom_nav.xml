@@ -11,7 +11,12 @@
         android:title="Home"
         android:enabled="true"/>
     <item
+        android:id="@+id/navTicket"
+        android:icon="@drawable/ic_baseline_sticky_note_2_24"
+        android:title="Ticket"/>
+    <item
         android:id="@+id/navfeedback"
-        android:icon="@drawable/ic_baseline_home_24"
+        android:icon="@drawable/ic_baseline_create_24"
         android:title="Feedback"/>
+
 </menu>

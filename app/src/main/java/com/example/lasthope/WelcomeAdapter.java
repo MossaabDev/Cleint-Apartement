@@ -14,14 +14,22 @@ public class WelcomeAdapter extends FragmentPagerAdapter {
         super(fm);
     }
 
+    public List<Fragment> getPages() {
+        return pages;
+    }
+
+    public void setPages(List<Fragment> pages) {
+        this.pages = pages;
+    }
+
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return null;
+        return pages.get(position);
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return pages.size();
     }
 }
